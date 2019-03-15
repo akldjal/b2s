@@ -1,23 +1,15 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <router-view/>
+    <div v-if="!isLogin">
+      <Header></Header>
+      <Menu></Menu>
+    </div>
+    <div :class="isLogin ? '' : 'page-content'">
+      <router-view/>
+    </div>
   </div>
 </template>
 
-<script>
-export default {
-  name: 'App'
-}
-</script>
+<script src="./js/app.js"></script>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+<style lang="less" src="./styles/app.less"></style>
