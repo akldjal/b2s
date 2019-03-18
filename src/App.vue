@@ -1,12 +1,6 @@
 <template>
   <div id="app">
-    <div v-if="!isLogin">
-      <Header></Header>
-      <Menu></Menu>
-    </div>
-    <div :class="isLogin ? '' : 'page-content'">
       <router-view/>
-    </div>
   </div>
 </template>
 
