@@ -5,9 +5,7 @@ import Admin from '@/pages/Admin'
 import customer from '@/pages/customer'
 import info from '@/pages/info'
 import orderInfo from '@/pages/orderInfo'
-import orderList from '@/pages/orderList'
 import productInfo from '@/pages/productInfo'
-import productList from '@/pages/productList'
 import shopping from '@/pages/shopping'
 
 Vue.use(Router)
@@ -40,19 +38,9 @@ export default new Router({
       component: orderInfo
     },
     {
-      path: '/orderlist',
-      name: 'orderList',
-      component: orderList
-    },
-    {
       path: '/productinfo',
       name: 'productInfo',
       component: productInfo
-    },
-    {
-      path: '/productlist',
-      name: 'productList',
-      component: productList
     },
     {
       path: '/shopping',

@@ -66,8 +66,7 @@ export default {
       //       console.log(error);
       //     });
       // }
-      this.$router.push('/admin');
-      sessionStorage.setItem('qr',0)
+      this.$router.push('/info');
     },
   }
 };

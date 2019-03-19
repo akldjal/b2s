@@ -1,5 +1,6 @@
 <template>
   <div class="login-wrap">
+    <!-- 登录 -->
     <div class="window">
       <div class="title">欢迎</div>
       <div class="form">
@@ -10,9 +11,7 @@
           <el-form-item label="密码" prop="password">
             <el-input type="password" v-model="user.password"></el-input>
           </el-form-item>
-          <el-form-item class="submit-button-content">
-            <el-button type="primary" @click="login">登录</el-button>
-          </el-form-item>
+          <el-button type="primary" @click="login">登录</el-button>
         </el-form>
       </div>
     </div>
