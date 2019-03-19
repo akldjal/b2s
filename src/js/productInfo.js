@@ -6,8 +6,35 @@ export default {
     Menu
   },
   data() {
-    return {}
+    return {
+      dialogA: false,
+      dialogE: false,
+      value9: '',
+      form: {
+        goodsName: '',
+        catalogId: '',
+        goodsState: '',
+        price: '',
+        goodsDescribe: '',
+      },
+      form2: {
+        goodsName: '',
+        catalogId: '',
+        goodsState: '',
+        price: '',
+        goodsDescribe: '',
+      },
+    }
   },
   mounted() {},
-  methods: {}
+  methods: {
+    addUser(){
+      this.dialogA = true
+    },
+    toAdd(){},
+    delete(){},
+    block(){},
+    editInfo(){},
+    checkInfo(value9){},
+  }
 }

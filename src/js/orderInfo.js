@@ -6,8 +6,21 @@ export default {
     Menu
   },
   data() {
-    return {}
+    return {
+      dialogA: false,
+      value9: '',
+      form: {
+        tel: '',
+        name: '',
+        sex: '',
+        
+      }
+    }
   },
   mounted() {},
-  methods: {}
+  methods: {
+    addUser(){
+      this.dialogA = true
+    }
+  }
 }
