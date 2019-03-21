@@ -1,4 +1,4 @@
-# b2s
+# btos
 
 > A Vue.js project
 
