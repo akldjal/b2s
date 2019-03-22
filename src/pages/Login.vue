@@ -19,7 +19,7 @@
 </template>
 
 <script>
-// import axios from 'axios';
+import axios from 'axios';
 // import md5 from 'blueimp-md5';
 
 export default {
@@ -68,29 +68,27 @@ export default {
   methods: {
     // 登录
     login() {
-      // let self = this;
-      // if (self.user.tel == '' || self.user.password == '') {
-      //   self.$message('账号密码不能为空');
-      // } else {
-      //   axios.get('http://192.168.5.11:8686/pms/login', {
-      //       params: {
-      //         tel: self.user.tel,
-      //         password: self.user.password
-      //       }
-      //     })
-      //     .then(function (res) {
-      //       // console.log(res);
-      //       self.$router.push('/information');
-      //       var consumer = res.data.response;
-      //       consumer = JSON.stringify(consumer);
-      //       localStorage.setItem('info', consumer);
-      //       //res.data.response: id, role, tel, name, sex, state, age
-      //     })
-      //     .catch(function (error) {
-      //       console.log(error);
-      //     });
-      // }
-      this.$router.push('/boss');
+      let self = this;
+      if (self.user.tel == '' || self.user.password == '') {
+        self.$message('账号密码不能为空');
+      } else {
+        axios.get('http://192.168.5.56:8080/person/login', {
+            params: {
+              tel: self.user.tel,
+              password: self.user.password
+            }
+          })
+          .then(function (res) {
+            console.log(res);
+            // self.$router.push('/boss');
+            // var consumer = res.data.response;
+            // consumer = JSON.stringify(consumer);
+            // localStorage.setItem('info', consumer);
+          })
+          .catch(function (error) {
+            console.log(error);
+          });
+      }
     },
   }
 };
